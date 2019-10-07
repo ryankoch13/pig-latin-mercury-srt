@@ -1,68 +1,171 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pig Latin Activity
 
-## Available Scripts
+In this activity we're going to create a Pig Latin application.  We'll use a React application as a template to run the code that we are going to write for Pig Latin.
 
-In the project directory, you can run:
 
-### `npm start`
+### Pig Latin Stories
+* As a user, I can type in a sentence to the Pig Latin application.
+* As a user, when I click Submit, I see a translation of the sentence I entered into Pig Latin.
+* As a user, the page is styled, and pleasing to use.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# Pig Latin
 
-### `npm test`
+We're going to use Mob Programming to practice our wireframing and programming skills while we build a Pig Latin translator application.  Not fluent in Pig Latin yet?  No problem, you'll pick it up in no time. [How to speak Pig Latin](http://www.wikihow.com/Speak-Pig-Latin)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Wireframing
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A *wireframe* of a web page or web site is simplification of the view to illustrate three things:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* What and where information is shown
+* What UI elements or widgets will be used (for instance, buttons vs. links)
+* How to navigate the page or the site
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Some wireframes look like they were drawn with a crayon by a three year old on the back of a napkin; these are called low-fidelity wireframes.
+The point is to only create a visual guide and not get into to many details. As long as the idea you are trying to get across is clear and understandable, its a successful wireframe.  You can use a whiteboard, paper, or whatever is convenient.
 
-### `npm run eject`
+There are online tools to make wireframing as easy as possible, and shareable as well.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![pig-latin](https://s3.amazonaws.com/learn-site/curriculum/mob-programming/pig-latin.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Wireframes can be higher-fidelity and attempt to create a truthful experience of how an application will work "in the wild". An Example: <a href="https://www.youtube.com/watch?v=MxWTGBQE7zE" target="_blank">Balsamiq Mockups 3 Intro</a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+See also:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<a href="https://en.wikipedia.org/wiki/Website_wireframe" target="_blank">Wikipedia: Website Wireframe</a>
 
-## Learn More
+<a href="https://www.youtube.com/watch?v=PmmQjLqJQlY" target="_blank">How to wireframe a website | CharliMarieTV</a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a href="https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399" target="_blank">A Beginner’s Guide to Wireframing</a>v
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Rules of Pig Latin
 
-### Analyzing the Bundle Size
+* For words beginning with a vowel, add "way" to the end.
+* For words beginning with one or more consonants, move all of the first consecutive consonants to the end, and add "ay".
+* If the first consonants include "qu", move the "u" along with the "q". Don't forget about words like "squeal" where "qu" doesn't come first!
+* For words beginning with "y", treat "y" as a consonant.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Examples
+There are many examples of Pig Latin translators out there on the Internet to give you inspiration. [Here's one](http://funtranslations.com/pig-latin)
 
-### Making a Progressive Web App
+## Challenge
+1) Brainstorm with your group how you would like your application to function.
+2) Use a whiteboard or paper to sketch out some ideas about how the application will work.
+3) Spend some time talking about how the code will need to work to make your app a reality.
+4) Get coding as a group on one part of the application, and build it out from there.
+5) Be sure and pause occasionally to discuss strategy and plan next steps.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+# Mob Programming
 
-### Advanced Configuration
+"All the brilliant minds working together on the same thing, at the same time, in the same space, and at the same computer" <a href="http://mobprogramming.org/" target="_blank">mobprogramming.org</a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Mob programming is a scaled up version of pair programming. There is still a driver at the keyboard, however, there may be two, alternating in typing the group's input. Everybody in the group contributes to the implementation, and people can bring laptops, books and other materials to help find solutions to problems, research API calls and provide understanding.
 
-### Deployment
+**Some Best Practices**
+* Change drivers every 30 minutes
+* Make sure everyone understands what's going on at all times
+* Take responsibility to stay engaged - ask questions, contribute ideas
+* Take breaks together
+* Help teammates stay engaged "Do you have any ideas.  Does that make sense to you?"
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Getting started
 
-### `npm run build` fails to minify
+All the code you'll need to write for this app is going to be inside one function in the ```/src/App.js``` file.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+After you accept the assignment (or clone this repo), you'll want to install all the npm packages using Yarn:
+
+```bash
+$ cd ./pig-latin-template
+$ yarn install
+```
+
+If you get an error about Yarn not being found:
+```bash
+Command 'yarn' not found, but can be installed with:
+sudo apt install cmdtest
+```
+
+You can install it with:
+
+```bash
+$ npm install -g yarn
+```
+
+Then you are ready to start a server to run the application:
+
+```bash
+$ yarn start
+```
+
+Now you're ready to code!
+
+Here's what that file looks like to start:
+
+```javascript
+import React from 'react';
+import './App.css';
+
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      phrase: '',
+      phraseTranslated: 'This is where your translated sentence will appear.'
+    }
+  }
+  
+  // The translate function is where you will put your logic to convert the sentence entered by the user to pig location.  What is currently in the function will only directly copy what the user has entered.
+
+  translate = (e) => {
+    e.preventDefault()
+    let translated = this.state.phrase
+    this.setState({phraseTranslated: translated})
+  }
+
+  handleChange = (e) => {
+    this.setState({phrase: e.target.value})
+  }
+
+  render() {
+    return (
+      
+      <div className="wrapper">
+        <header className="box header">
+          <div id="pigImage">
+            <img src='https://lh3.googleusercontent.com/QvvsRY5ShwDNEouVMK8_z7QCwS3grkgd4mzZOlom23Hurralk54ObvsyEMM8ZSNR5pEFBeBMzltzEEcgi2llYJnhXTuXClN3njmMjtw3vgn8Go5jr40fHMNzfI64eYRrnHbZUutxCA=w2400' alt="pig with butcher cut names in pig latin" id="butcherPig"></img>
+          </div>
+        </header>
+        <sidebar className="box sidebar">
+          <div>
+            <form className="info" onSubmit={this.translate}>
+              <label htmlFor="input-phrase">Translate this: </label>
+              <input name="input-phrase" onChange={this.handleChange}></input>
+              <input className="button" type="submit" value="Submit" />
+            </form>
+          </div>
+        </sidebar>
+        <main>
+          <div className="text-center box content">
+            <p>{this.state.phraseTranslated}</p>
+          </div>
+        </main>
+        <footer className="box footer">
+          <div className="text-center">
+            <p>Coded by * * *</p>
+          </div>
+        </footer>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+To get started, find the ```translate``` function, and write your code.  Everytime you save your updated file, the browser window displaying your app will reload.
+
+### A note for Cloud 9 users
+Once you run the ```yarn start``` command above,  You'll want to click the 'Preview' button to see your running application.
