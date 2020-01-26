@@ -6960,15 +6960,6 @@ react-dev-utils@^9.0.4:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@^16.9.0:
-  version "16.12.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.12.0.tgz#0da4b714b8d13c2038c9396b54a92baea633fe11"
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.18.0"
-
 react-error-overlay@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.2.tgz#642bd6157c6a4b6e9ca4a816f7ed30b868c47f81"
@@ -7040,6 +7031,8 @@ react-scripts@3.1.2:
 react@^16.9.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
+  integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA
+
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -7431,6 +7424,8 @@ saxes@^3.1.9:
 scheduler@^0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.18.0.tgz#5901ad6659bc1d8f3fdaf36eb7a67b0d6746b1c4"
+  integrity sha512-agTSHR1Nbfi6ulI0kYNK0203joW2Y5W4po4l+v03tOoiJKpTBbxpNhWDvqc/4IcOw+KLmSiQLTasZ4cab2/UWQ
+
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
