@@ -14,7 +14,7 @@ class App extends Component {
     }
   }
 
-  // The 'myPigLatinCodeHere' function is where you will put your logic to convert the sentence entered by the user to Pig Latin.
+  // The 'myPigLatinCodeHere' function is where you will put your logic to convert the sentence entered by the user to Pig Latin
 
   myPigLatinCodeHere = () => {
     // the variable 'userInput' will contain the text input from the user
@@ -54,7 +54,7 @@ class App extends Component {
   }
 
   setUpPreventDefault = (e) => {
-    // this method prevents react from refreshing the page unnecessarily
+    // this method prevents React from refreshing the page unnecessarily
     // no need to modify this method
     e.preventDefault()
     this.myPigLatinCodeHere()
