@@ -1,7 +1,7 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
-class App extends React.Component {
+class App extends Component {
   constructor(props){
     super(props)
     // the state object holds information that can be displayed to the user and updated throughout the program
@@ -110,8 +110,8 @@ class App extends React.Component {
           Coded by ~your name here~
         </footer>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
