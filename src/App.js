@@ -8,9 +8,9 @@ class App extends Component {
     this.state = {
       // 'phrase' is the text entered by the user - right now there are some test words hard coded to make the process of testing your code a bit faster and easier
       // ACTION ITEM: when you are ready for your full user experience, delete the test words so phrase is assigned an empty string
-      phrase: 'every through yummy squeal queen fry',
+      phrase: 'Input words',
       // 'phraseTranslated' is what the user will see appear on the page as Pig Latin, it starts as the preset message and updates when your user clicks the 'submit' button
-      phraseTranslated: 'This is where your translated sentence will appear.'
+      phraseTranslated: ''
     }
   }
 
@@ -35,74 +35,47 @@ class App extends Component {
       let currWordArr = currentWord.split("")
       //If else tree
 
-      //First letter vowel
-      if (vowArr.includes(currWordArr[0])) {
-          currWordArr.push("w", "a", "y")
+//Y as a vowel
+      if (false== currWordArr.filter(value => vowArr.includes(value))) {
+//Run following logic if it does not contain a vowel
+        while (currWordArr[0] !== "y"){
+          currWordArr.push(currWordArr.shift())
+        }
+        currWordArr.push("a", "y")
+        let newPigWord = currWordArr.join("")
+        translatedWordsArray.push(newPigWord)
+//If the first letter is 'q' and the second is "u"
+      } else if (currWordArr[0] == "q" && currWordArr[1] == "u") {
+          //This takes "q" and put it at the end
+          currWordArr.push(currWordArr.shift())
+          //This takes "u" and put it at the end
+          currWordArr.push(currWordArr.shift())
+
+          currWordArr.push("a", "y")
           let newPigWord = currWordArr.join("")
           translatedWordsArray.push(newPigWord)
-      }
-
-
-      //First letter/s consanant
-      if (false == vowArr.includes(currWordArr[0])) {
-        //Create a while loop to specify  when to stop iterating at the sight of first vowel
-        while (vowArr.includes(currWordArr[0])) {
-          currWordArr.push(currWordArr.shift())
-        }
-        currWordArr.push("a", "y")
-        let newPigWord = currWordArr.join("")
-        translatedWordsArray.push(newPigWord)
-      }
-
-      //If the first letter is 'q' and the second is "u"
-      if (currWordArr[0] == "q" && currWordArr[1] == "u") {
-        //This takes "q" and put it at the end
-        currWordArr.push(currWordArr.shift())
-        //This takes "u" and put it at the end
-        currWordArr.push(currWordArr.shift())
-        
-        currWordArr.push("a", "y")
-        let newPigWord = currWordArr.join("")
-        translatedWordsArray.push(newPigWord)
-      }
-
-
-//if the word array does not have the vowel then the array of consanants will be removed from the array and pushed to the end
-
-      //Y as a vowel
-      //Create if statement that determines if a word contains a vowel
-      if ([] == currWordArray.filter(value => vowelArr.contains(value))) {
-      //Run following logic if it does not contain a vowel
-        while (currWordArray[0] !== "y"){
-          currWordArr.push(currWordArr.shift())
-        }
-        currWordArr.push("a", "y")
-        let newPigWord = currWordArr.join("")
-        translatedWordsArray.push(newPigWord)
-      }
-
-      //First consanant string ends with Q
-
-
-
-      //Stretch goals:
-      //Punctuation/Non-letter characters
-      //Case sensitivity
-
-
-
-
-
-      // Remember: console.log is your friend :)
-
-
-      // ACTION ITEM: change the value of currentWord in the push method to the name of whatever variable you made containing your Pig Latin'd word
-      return translatedWordsArray.push(currentWord)
+//First letter/s consanant
+      }   else if (false == vowArr.includes(currWordArr[0])) {
+//Create a while loop to specify  when to stop iterating at the sight of first vowel
+              while (false == vowArr.includes(currWordArr[0])) {
+                currWordArr.push(currWordArr.shift())
+              }
+              currWordArr.push("a", "y")
+              let newPigWord = currWordArr.join("")
+              translatedWordsArray.push(newPigWord)
+//Create if statement that determines if the first letter of a word contains a vowel
+            }  else if (vowArr.includes(currWordArr[0])) {
+                  currWordArr.push("w", "a", "y")
+                  let newPigWord = currWordArr.join("")
+                  translatedWordsArray.push(newPigWord)
+                } else {
+                  return "undefined"
+                }
+// ACTION ITEM: change the value of currentWord in the push method to the name of whatever variable you made containing your Pig Latin'd word
+      return translatedWordsArray
     })
-
-
-    // joining the array back to a string of translated words
-    // no need to change this variable
+// joining the array back to a string of translated words
+// no need to change this variable
     let translatedWords = translatedWordsArray.join(" ")
 
     // the setState method will take your information from 'translatedWords' and update the state object that is displayed to the user
@@ -128,8 +101,8 @@ class App extends Component {
     // this method restarts the game by setting the original state
     // ACTION ITEM: when you are ready for your full user experience, delete the test words in phrase so that is assigned an empty string
     this.setState({
-      phrase: 'through every squeal queen fry',
-      phraseTranslated: 'This is where your translated sentence will appear.'
+      phrase: 'Input words',
+      phraseTranslated: ''
     })
   }
 
@@ -165,7 +138,7 @@ class App extends Component {
             <p>{ this.state.phraseTranslated }</p>
           </div>
         <footer>
-          Coded by ~your name here~
+        <strong> Coded by ~Selam, Ryan K., Trip~</strong>
         </footer>
       </div>
     )
