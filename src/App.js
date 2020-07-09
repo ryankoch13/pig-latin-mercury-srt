@@ -68,7 +68,18 @@ class App extends Component {
 
 
 //if the word array does not have the vowel then the array of consanants will be removed from the array and pushed to the end
-      //First letter y
+
+      //Y as a vowel
+      //Create if statement that determines if a word contains a vowel
+      if ([] == currWordArray.filter(value => vowelArr.contains(value))) {
+      //Run following logic if it does not contain a vowel
+        while (currWordArray[0] !== "y"){
+          currWordArr.push(currWordArr.shift())
+        }
+        currWordArr.push("a", "y")
+        let newPigWord = currWordArr.join("")
+        translatedWordsArray.push(newPigWord)
+      }
 
       //First consanant string ends with Q
 
@@ -78,7 +89,7 @@ class App extends Component {
       //Punctuation/Non-letter characters
       //Case sensitivity
 
-})
+
 
 
 
