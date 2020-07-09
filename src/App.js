@@ -45,14 +45,28 @@ class App extends Component {
 
       //First letter/s consanant
       if (false == vowArr.includes(currWordArr[0])) {
-        //Create a for loop to specify  when to stop iterating at the sight of first vowel
-        for (let i=0, vowArr.includes(currWordArr[i]), i++) {
+        //Create a while loop to specify  when to stop iterating at the sight of first vowel
+        while (vowArr.includes(currWordArr[0])) {
           currWordArr.push(currWordArr.shift())
         }
         currWordArr.push("a", "y")
         let newPigWord = currWordArr.join("")
         translatedWordsArray.push(newPigWord)
       }
+
+      //If the first letter is 'q' and the second is "u"
+      if (currWordArr[0] == "q" && currWordArr[1] == "u") {
+        //This takes "q" and put it at the end
+        currWordArr.push(currWordArr.shift())
+        //This takes "u" and put it at the end
+        currWordArr.push(currWordArr.shift())
+        
+        currWordArr.push("a", "y")
+        let newPigWord = currWordArr.join("")
+        translatedWordsArray.push(newPigWord)
+      }
+
+
 //if the word array does not have the vowel then the array of consanants will be removed from the array and pushed to the end
       //First letter y
 
