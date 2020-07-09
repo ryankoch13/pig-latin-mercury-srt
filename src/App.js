@@ -24,6 +24,7 @@ class App extends Component {
     // as you modify and create Pig Latin-ified words, push them into 'translatedWordsArray'
     // no need to change this variable
     let translatedWordsArray = []
+    const vowArr = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
     // taking the user input and spliting the text into an array of words
     let splitUserInput = userInput.toLowerCase().split(" ")
@@ -31,9 +32,29 @@ class App extends Component {
     // now that we have an array of words, we can map over the array and access each word
     splitUserInput.map(currentWord => {
       // ACTION ITEM: use 'currentWord' as a starting point for your code
+      let currWordArr = currentWord.split("")
+      //If else tree
+      
+      //First letter vowel
+      if (vowArr.includes(currWordArr[0])) {
+          currWordArr.push("w", "a", "y")
+          let newPigWord = currWordArr.join("")
+          translatedWordsArray.push(newPigWord)
+      }
 
 
-      // your code here!
+      //First letter/s consanant
+      //First letter y
+      //First consanant string ends with Q
+
+
+      //Stretch goals:
+      //Punctuation/Non-letter characters
+      //Case sensitivity
+
+})
+
+     
 
       // Remember: console.log is your friend :)
 
