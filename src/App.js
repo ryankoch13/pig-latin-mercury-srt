@@ -34,7 +34,7 @@ class App extends Component {
       // ACTION ITEM: use 'currentWord' as a starting point for your code
       let currWordArr = currentWord.split("")
       //If else tree
-      
+
       //First letter vowel
       if (vowArr.includes(currWordArr[0])) {
           currWordArr.push("w", "a", "y")
@@ -44,8 +44,20 @@ class App extends Component {
 
 
       //First letter/s consanant
+      if (false == vowArr.includes(currWordArr[0])) {
+        //Create a for loop to specify  when to stop iterating at the sight of first vowel
+        for (let i=0, vowArr.includes(currWordArr[i]), i++) {
+          currWordArr.push(currWordArr.shift())
+        }
+        currWordArr.push("a", "y")
+        let newPigWord = currWordArr.join("")
+        translatedWordsArray.push(newPigWord)
+      }
+//if the word array does not have the vowel then the array of consanants will be removed from the array and pushed to the end
       //First letter y
+
       //First consanant string ends with Q
+
 
 
       //Stretch goals:
@@ -54,7 +66,7 @@ class App extends Component {
 
 })
 
-     
+
 
       // Remember: console.log is your friend :)
 
